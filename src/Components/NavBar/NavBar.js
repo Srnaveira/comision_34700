@@ -1,3 +1,4 @@
+import CartWidget from '../CartWidget/CartWidget';
 import './navbar.scss'
 
 const NavBar = () => {
@@ -15,8 +16,14 @@ const NavBar = () => {
                     </ul>
                 </li>
             </ul>
-            <ul className="container__NavBar__user">
+            <CartWidget />
+            <ul className="container__NavBar__user">    
                 <li className="container__NavBar__user--inf">USUARIO</li>
+                <ul className="listGenders">
+                    <li>CONFIGURACION</li>
+                    <li>COMPRAS</li>
+                    <li>SALIR</li>
+                </ul>            
             </ul>
         </nav>
     );
