@@ -1,0 +1,52 @@
+.container{
+    margin-top: 7rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__count{
+        border: solid blue 1px;
+        width: 8rem;
+        display: flex;
+        justify-content: space-between;
+        &--substraction{
+            width: 2rem;
+            background-color: rgba(118, 5, 5, 0.496);
+            color: white;
+            &:hover{
+                background-color: green;    
+            }
+        }
+        &--number{
+            width: 6rem;
+            background-color: white;
+            color: rgba(118, 5, 5, 0.745) ;
+        }
+        &--add{
+            width: 2rem;
+            background-color: rgba(118, 5, 5, 0.496);
+            color: white;
+            &:hover{
+                background-color: green;    
+            }
+        }
+    }
+    &__button{
+        margin-top: 0.8rem;
+        padding-top: 2px;
+        border: white solid 1px;
+        border-radius: 6px;
+        font-weight: 600;
+        color: #000;
+        background-color: rgba(238, 174, 55, 0.685);
+        height: 1.8rem;
+        width: 7rem;
+        &:hover{
+            background-color: green;
+            color: white;
+        }
+    }
+    
+}

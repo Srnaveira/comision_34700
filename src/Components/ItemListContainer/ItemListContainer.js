@@ -1,6 +1,12 @@
-
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemListContainer = ({texto, mensaje}) =>{
+
+    const ondAdd = (cant) =>{
+        alert("la cantidad comprada es de :" + cant);
+
+    }
+
 
     return(
         <div style={{textAlign: "center"}}>
@@ -12,6 +18,7 @@ const ItemListContainer = ({texto, mensaje}) =>{
                     {mensaje} 
                 </h3>
             </div>
+            <ItemCount Initiation ={1} stock={5} ondAdd={ondAdd} ></ItemCount>
         </div>
     );
 }
