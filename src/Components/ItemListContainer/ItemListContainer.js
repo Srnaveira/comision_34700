@@ -1,24 +1,37 @@
-import ItemCount from "../ItemCount/ItemCount";
+import { useEffect, useState } from "react";
+import './itemlistcontainer.css'
+import CargarProductos from "../../Mock/CargarProductos";
+import Spinner from "../Spinner/Spinner";
+import ItemList from "../ItemList/ItemList"
 
-const ItemListContainer = ({texto, mensaje}) =>{
 
-    const ondAdd = (cant) =>{
-        alert("la cantidad comprada es de :" + cant);
+const ItemListContainer = () =>{
 
-    }
+    const [loading, setLoading] = useState(true)
+    const [loaddata, setLoaddata] = useState()
 
+    useEffect(() =>{  
+        CargarProductos() 
+                .then((data) =>{
+                    setLoaddata(data)
+                })
+                .catch((error) =>{
+                    console.log("THERE WAS A ERROR  " + error )
+                })
+                .finally(() => {
+                    setLoading(false)
+                    
+                })
+    }, [])
+
+    console.log(loaddata)
 
     return(
-        <div style={{textAlign: "center"}}>
-            <h1 style={{margin: "25px"}}>
-                {texto}    
-            </h1>
-            <div>
-                <h3>
-                    {mensaje} 
-                </h3>
-            </div>
-            <ItemCount Initiation ={1} stock={5} ondAdd={ondAdd} ></ItemCount>
+        <div className="principalContenedor">
+            {    
+            loading ? <Spinner />
+                    : <ItemList  items={loaddata}/>
+            }
         </div>
     );
 }

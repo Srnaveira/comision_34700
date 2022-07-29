@@ -1,13 +1,16 @@
+import './App.css'
 import NavBar from './Components/NavBar/NavBar';
-import './App.css';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Footer from './Components/Footer/Footer';
+
 
 function App() {
   return (
-    <div style={{backgroundColor: "wheat", height: "100vh"}}>
-      <NavBar />
-      <ItemListContainer texto="Entrega COMPONENTES I" mensaje="HOLA MUNDO!!!"/>
-    </div>
+        <div className="cont__principal">
+          <NavBar />
+          <ItemListContainer />
+          <Footer />
+        </div>
     );
 }
 
