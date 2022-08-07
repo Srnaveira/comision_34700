@@ -1,4 +1,4 @@
-const productos = [
+const products = [
     {
             id: 1,
             titulo: "El nombre del Viento",
@@ -15,7 +15,7 @@ const productos = [
             titulo: "El temor de un hombre sabio",
             autor: "Patrick Rothfuss", 
             genero: "Fantasia",
-            stock: 0,
+            stock: 20,
             precio: 6457.00,
             descuento: 0,
             imagen: "https://www.popularlibros.com/imagenes.webp/9788401/978840133963.webp",
@@ -123,4 +123,4 @@ const productos = [
 ]               
 
 
-export default productos;
+export default products;

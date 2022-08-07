@@ -1,4 +1,7 @@
-const Item = ({item}) => {
+import { Link }  from 'react-router-dom'
+
+
+const Item = ({ item }) => {
     return(
             <div className="contenedor">
                <div className="contenedor__titulo">
@@ -8,7 +11,9 @@ const Item = ({item}) => {
                    <img className="foto" src={item.imagen}></img>
                </div>
                <div className="button">
+                    <Link to={`/products/${item.id}`}>
                         <input className="button_Detail" type="button" value="DETALLE"></input>
+                    </Link>
                </div>
             </div>
     );
@@ -16,3 +21,4 @@ const Item = ({item}) => {
 }
 
 export default Item;
+

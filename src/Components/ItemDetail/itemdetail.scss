@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.div__detail{
+    height: 84vh;
+    display: flex;
+    border-radius: 15px;
+    background-color: rgba(79, 129, 65, 0.63);
+    margin: 3rem;
+    flex-direction: column;
+    &__encabezados{
+         display: flex;
+         flex-direction: column;
+         border-bottom: solid rgba(245, 222, 179, 0.962);
+         color: rgba(162, 162, 56, 0.866);
+         text-align: start;
+         height: 7vh;
+         width: 100%;
+         .titulo{
+               height: 4vh;
+               width: 100%;
+               color: black;
+               font-size: 3.1rem;
+               font-weight: 900;
+               padding-left: 2rem;
+               justify-content: flex-start; 
+               text-transform: uppercase;
+               align-items: center;
+         }
+         .autor{
+               height: 3vh;
+               text-align: start;
+               font-style: italic;
+               color: blacK;
+               text-shadow: 0.3mm 0.3mm red;
+               width: 100%;
+               font-size: 2rem;
+               padding-left: 2rem;
+ 
+           }
+     
+     } 
+     &__detalle{
+             display: flex;
+             justify-content: space-between;
+             width: 100%;
+             &--imagen{
+               width: auto;
+               padding: 1.5rem;
+            }
+             img{
+               width: 460px;
+               border-radius: 15px;
+            }
+             &--resto{
+               display: flex;
+               flex-direction: column;
+               padding: 2rem 1rem 2rem 0rem ;
+               p{
+                 font-size: 1.3rem;
+                 margin: 0rem 2rem 0rem 2rem;
+                 text-align: justify;
+                 padding-top: 4rem;                
+                 padding-bottom: 2rem;
+                 color: whitesmoke;
+             
+               }
+               .precio{
+                 color: wheat;
+                 margin-top: 2rem;
+                 width: 100%;  
+                 font-weight: 800;
+                 font-family: Arial, Helvetica, sans-serif;
+                 font-size: 3rem;
+                 text-align: center;
+
+               }
+
+             }                      
+             &--compra{
+                 display: flex;
+                 height: 7vh;
+                 justify-content: center;
+             }
+      }
+
+
+}
+
+

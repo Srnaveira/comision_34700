@@ -1,5 +1,6 @@
-import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 import './navbar.scss'
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
 
@@ -9,10 +10,18 @@ const NavBar = () => {
                 <li className="container__NavBar__principal__title">EL BAUL</li>
                 <li className="container__NavBar__principal__genders">GENEROS
                     <ul className="listGenders">    
-                        <li>ACCION</li>
-                        <li>CIENCIA-FICCION</li>
-                        <li>FANTASIA</li>
-                        <li>HISTORICO</li>
+                        <li>
+                            <Link to='/gender/ACCION' className='links'>ACCION</Link>
+                        </li>
+                        <li>
+                            <Link to='/gender/CIENCIA-FICCION' className='links'>CIENCIA-FICCION</Link>
+                        </li>
+                        <li>
+                            <Link to='/gender/FANTASIA' className='links'>FANTASIA</Link>
+                        </li>
+                        <li>
+                            <Link to='/gender/HISTORICO' className='links'>HISTORICO</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -20,9 +29,15 @@ const NavBar = () => {
             <ul className="container__NavBar__user">    
                 <li className="container__NavBar__user--inf">USUARIO</li>
                 <ul className="listGenders">
-                    <li>CONFIGURACION</li>
-                    <li>COMPRAS</li>
-                    <li>SALIR</li>
+                    <li>
+                        CONFIGURACION
+                    </li>
+                    <li>
+                        COMPRAS
+                    </li>
+                    <li>
+                        SALIR
+                    </li>
                 </ul>            
             </ul>
         </nav>

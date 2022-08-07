@@ -1,48 +1,56 @@
 .container{
-    margin-top: 7rem;
     height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &__count{
-        border: solid blue 1px;
-        width: 8rem;
+        border: solid white 3px;
+        width: 20rem;
+        height: 3rem;
         display: flex;
-        justify-content: space-between;
         &--substraction{
-            width: 2rem;
+            width: 4rem;
+            font-size: 2rem;
+            border: solid 1px white;
             background-color: rgba(118, 5, 5, 0.496);
             color: white;
             &:hover{
                 background-color: green;    
             }
         }
-        &--number{
-            width: 6rem;
-            background-color: white;
-            color: rgba(118, 5, 5, 0.745) ;
+        &--cant{
+            width: 100%;
+            text-align: center;
+            color: rgba(118, 5, 5, 0.796);
+            background-color: wheat;
+            font-size: 2.2rem;
+            font-weight: 800;
+            font-family: Arial, Helvetica, sans-serif;
         }
         &--add{
-            width: 2rem;
+            width: 4rem;
+            border: solid 1px white;
             background-color: rgba(118, 5, 5, 0.496);
             color: white;
+            font-size: 2rem;
             &:hover{
                 background-color: green;    
             }
         }
     }
     &__button{
-        margin-top: 0.8rem;
-        padding-top: 2px;
         border: white solid 1px;
+        margin-top: 1rem;
+        padding-top: 3px;
         border-radius: 6px;
         font-weight: 600;
-        color: #000;
+        color: green;
         background-color: rgba(238, 174, 55, 0.685);
-        height: 1.8rem;
-        width: 7rem;
+        height: 3rem;
+        width: 13rem;
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
         &:hover{
             background-color: green;
             color: white;
