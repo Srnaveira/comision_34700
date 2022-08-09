@@ -12,15 +12,12 @@ const ItemListContainer = () =>{
     const [loaddata, setLoaddata] = useState()
     const { genderId } = useParams()
 
-    console.log(genderId)
-
     useEffect(() =>{
         setLoading(true)
         if(!genderId){     
             getProducts() 
                 .then((data) =>{
                     setLoaddata(data)
-                    console.log(data)
                 })
                 .finally(() => {
                     setLoading(false)
@@ -29,7 +26,6 @@ const ItemListContainer = () =>{
             getGenders(genderId)
                 .then((data) =>{
                     setLoaddata(data)
-                    console.log(data)
                 })
                 .finally(() => {
                     setLoading(false)

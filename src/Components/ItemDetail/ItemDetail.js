@@ -1,11 +1,31 @@
 import "./itemdetail.scss";
+import { useState } from 'react'
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ item }) =>{
 
+    const [isIncart, SetIsIncart] = useState(false)
+
+    const [itemIncart, SetItemIncart] = useState([])
+
     const onAdd = ( number ) => {
-        alert("Estas por comprar: " + number) 
+        SetIsIncart(true)
+        const addCart = {
+                ...item,
+                Cantcomp: number
+            }
+
+
+        SetItemIncart([...itemIncart, addCart])       
     }
+    if(itemIncart.length !== 0){
+        setTimeout(() => {
+            console.log(itemIncart)    
+        }, 1000);
+    }
+       
+     
+
 
     return(
         <div className='div__detail'>
@@ -25,6 +45,7 @@ const ItemDetail = ({ item }) =>{
                                     initiation={Number(1)}
                                     stock={item.stock}
                                     onAdd={ onAdd }
+                                    isIncart={ isIncart }
                                 />
                             </div>
                     </div>            

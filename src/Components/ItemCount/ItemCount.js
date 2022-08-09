@@ -2,9 +2,9 @@ import {useState} from 'react'
 import './itemcount.scss'
 
 
-const ItemCount = ({ initiation,  stock, onAdd}) => {
+const ItemCount = ({ initiation,  stock, onAdd, isIncart}) => {
 
-    const [number, SetNumber] = useState(initiation)
+    const [number, SetNumber] = useState( initiation )
 
     const handlerAdd = () =>{
         if(number < stock) {
@@ -27,17 +27,21 @@ const ItemCount = ({ initiation,  stock, onAdd}) => {
     return(
         <div className='container'>
             <div className='container__count'>
-                <button className='container__count--substraction' onClick={handlerSubstraction} disabled={initiation === number}> 
-                 -
-                </button>
-                <span className='container__count--cant'>
-                    {number}
-                </span>
-                <button className='container__count--add' onClick={handlerAdd} disabled={stock === number}> 
-                 +
-                </button>
+            <button className='container__count--substraction' onClick={handlerSubstraction} disabled={initiation === number}> 
+             -
+            </button>
+            <span className='container__count--cant'>
+                {number}
+            </span>
+            <button className='container__count--add' onClick={handlerAdd} disabled={stock === number}> 
+             +
+            </button>
             </div>
-            <button className='container__button' onClick={() =>{onAdd(number)}}>COMPRAR</button>
+            {
+                !isIncart?
+                            <button className='container__button' onClick={() =>{onAdd(number)}}>COMPRAR</button>    
+                         :  <button className='container__button2' onClick={() =>{onAdd(number)}}>FINALIZAR COMPRA</button>
+            }
         </div>
     );
 }
