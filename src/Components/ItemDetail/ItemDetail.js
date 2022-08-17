@@ -1,36 +1,32 @@
-import "./itemdetail.scss";
-import { useState } from 'react'
-import ItemCount from "../ItemCount/ItemCount";
+import './itemdetail.scss'
+import { useContext } from "react";
+import { CartContext } from '../../Context/CartContext';
+import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({ item }) =>{
+const ItemDetail = ({item}) => {
 
-    const [isIncart, SetIsIncart] = useState(false)
+    const { addItem, isInCart, cart } = useContext(CartContext)
 
-    const [itemIncart, SetItemIncart] = useState([])
+    const numvendido = 1
 
-    const onAdd = ( number ) => {
-        SetIsIncart(true)
-        const addCart = {
-                ...item,
-                Cantcomp: number
-            }
+    const onAdd = () => {
+    
+        const itemCarrito = {
+                    ...item,
+                    numvendido
+        }
 
+        isInCart(item.id) ? console.log("El item ya se encuentra en el carrito =>", itemCarrito)
+        : addItem(itemCarrito)
 
-        SetItemIncart([...itemIncart, addCart])       
+        console.log("el Contenido del carrito =>", cart)
     }
-    if(itemIncart.length !== 0){
-        setTimeout(() => {
-            console.log(itemIncart)    
-        }, 1000);
-    }
-       
-     
 
 
     return(
         <div className='div__detail'>
             <div className='div__detail__encabezados'>    
-                <h1 className="titulo">{item.titulo.toUpperCase()}</h1>
+                <h1 className="titulo">{item.titulo}</h1>
                 <h3 className="autor">{item.autor}</h3>
             </div>    
             <div className='div__detail__detalle'>
@@ -40,19 +36,20 @@ const ItemDetail = ({ item }) =>{
                     <div className='div__detail__detalle--resto'>
                             <p>{item.resumen}</p>
                             <span className='precio'> $ {item.precio} </span>
-                            <div>
-                                <ItemCount
-                                    initiation={Number(1)}
+                            <div className='div__detail__detalle--compra'>
+                                <ItemCount 
+                                    idProducto={item.id} 
                                     stock={item.stock}
                                     onAdd={ onAdd }
-                                    isIncart={ isIncart }
                                 />
                             </div>
                     </div>            
             </div>
         </div>
     );
-
-}
+} 
 
 export default ItemDetail;
+
+
+

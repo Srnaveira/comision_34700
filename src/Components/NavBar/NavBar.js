@@ -7,7 +7,7 @@ const NavBar = () => {
     return(
         <nav className="container__NavBar">
             <ul className="container__NavBar__principal">
-                <li className="container__NavBar__principal__title">EL BAUL</li>
+                <li className="container__NavBar__principal__title"><Link className="container__NavBar__principal__title" to={"/"}>EL BAUL</Link></li>
                 <li className="container__NavBar__principal__genders">GENEROS
                     <ul className="listGenders">    
                         <li>

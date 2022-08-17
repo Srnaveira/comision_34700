@@ -1,76 +1,65 @@
-.container{
-    height: 100%;
+.contador {
+    height: auto;
+    width:  27vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-self: center;
     align-items: center;
-    &__count{
-        border: solid white 3px;
-        width: 20rem;
-        height: 3rem;
-        display: flex;
-        &--substraction{
-            width: 4rem;
-            font-size: 2rem;
-            border: solid 1px white;
-            background-color: rgba(118, 5, 5, 0.496);
-            color: white;
-            &:hover{
-                background-color: green;    
-            }
-        }
-        &--cant{
-            width: 100%;
-            text-align: center;
-            color: rgba(118, 5, 5, 0.796);
-            background-color: wheat;
-            font-size: 2.2rem;
-            font-weight: 800;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        &--add{
-            width: 4rem;
-            border: solid 1px white;
-            background-color: rgba(118, 5, 5, 0.496);
-            color: white;
-            font-size: 2rem;
-            &:hover{
-                background-color: green;    
-            }
-        }
-    }
+    align-content: center;
     &__button{
-        border: white solid 1px;
-        margin-top: 1rem;
-        padding-top: 3px;
-        border-radius: 6px;
+        background-color: rgb(12, 77, 12);
+        border: black solid 1px;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
         font-weight: 600;
-        color: green;
-        background-color: rgba(238, 174, 55, 0.685);
-        height: 3rem;
-        width: 13rem;
-        font-size: 2rem;
-        font-family: Arial, Helvetica, sans-serif;
-        &:hover{
-            background-color: green;
-            color: white;
-        }
+        height: auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 13px;
+        padding: 0.25rem 0rem 0.3rem 0rem; 
+    }
+    &__button:hover{
+        background-color: white;
+        color: black;
+
     }
     &__button2{
-        border: white solid 1px;
-        margin-top: 1rem;
-        padding-top: 3px;
-        border-radius: 6px;
-        font-weight: 600;
-        color: white;
+        width: 27vh;
+        text-decoration: none;        
         background-color: red;
-        height: 3rem;
-        width: 22rem;
-        font-size: 2rem;
-        font-family: Arial, Helvetica, sans-serif;
-        &:hover{
-            background-color: blue;
-            color: white;
-        }
+        border: black solid 1px;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 13px;
+        padding: 0.25rem 0rem 0.3rem 0rem; 
+      }
+      &__button2:hover{
+        background-color: white;
+        color: black;
+
     }
+
+    &__disabled{
+        background-color: red;
+        border: black solid 1px;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
+        font-weight: 600;
+        height: auto;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0.25rem 2rem 0.3rem 2rem ; 
+    }
+
 }
