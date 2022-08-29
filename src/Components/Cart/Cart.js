@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { CartContext } from '../../Context/CartContext';
 import './cart.scss'
 
 const Cart = () =>{
 
-    const { cart, removeItem, clearCart, calcTotal } = useContext(CartContext)
+    const { cart, removeItem, clearCart, calcTotal, endBuy } = useContext(CartContext)
 
     const volver = useNavigate()
 
@@ -40,7 +40,9 @@ const Cart = () =>{
             </div>
             <div className="ContenedorAccion">
             <button onClick={() => clearCart()} className="Limpiar">LIMPIAR CARRITO</button>
-            <button  disabled={true} onClick={() => clearCart()} className="FinalizarCompra">TERMINAR COMPRA</button>
+            <Link to={'/'} style={{textDecoration: 'none'}}>
+            <button onClick={() => endBuy(cart)} className="FinalizarCompra">TERMINAR COMPRA</button>
+            </Link>
             <button onClick={() => handlerBack()} className="SeguirComprando">SEGUIR COMPRANDO</button>
             
             </div>

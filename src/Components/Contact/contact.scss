@@ -1,0 +1,85 @@
+.formu{
+    display: flex;
+    height: 90vh;
+
+    &__contacts{
+        height: 50vh;
+        width: 80vh;
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        background-color: rgba(79, 129, 65, 0.63);
+        color: rgba(207, 207, 57, 0.866);
+        border-radius: 15px;
+        h1{
+            padding-left: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+        h4{
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+
+        }  
+        &--container{
+            width: 80%;
+            display: flex;
+            align-self: center;
+            padding-top: 1rem;
+            .labeldetitulo{
+                padding-left: 0.20rem;
+                width: 13%;
+            }
+            .labeldeemail{
+                align-self: start;
+                padding-left: 0.20rem;
+                width: 13%;
+            }
+            .labeldecomentarios{
+                padding-left: 0.20rem;
+                align-self: start;
+                width: 13%;
+            }
+            input{
+                height: 1.5rem;
+                border-radius: 8px;
+                width: 18rem;
+
+            }
+            textarea{
+                border-radius: 8px;
+                width: 80%;
+            }
+        }
+        &--button{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            padding: 1rem 0rem 1rem 0rem;
+            .buttonEnviar{
+                border-radius: 8px;
+                background-color: rgb(12, 77, 12);
+                color: white;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                padding-bottom: 1px;
+                font-size: large;
+                border: goldenrod solid 2px;
+                width: 7rem;
+                height: 2.5rem
+            }
+            .buttonEnviar:hover{
+                border-radius: 8px;
+                background-color: red;
+                color: white;
+                font-weight: 500;
+                border: white solid 2px;
+                }
+                
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.contenedor__footer{
+    background-color: black;
+    height: 5vh;
+    color: goldenrod;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+    
+.link-contact{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+
+

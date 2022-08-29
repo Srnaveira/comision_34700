@@ -1,0 +1,45 @@
+.formulario{
+    height: 90vh;
+    margin: 2rem;
+    background-color: rgba(79, 129, 65, 0.63);
+    border-radius: 15px;
+    h1{
+       display: flex;
+       margin-left: auto;
+       margin-right: auto;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       color: white;
+       height: 4vh;
+       width: 80%;
+       text-align: center;
+       border-bottom: 2px white solid;
+    }
+    &__productos{
+        background-color: rgba(79, 129, 65, 0.63);
+        height: 60vh;
+        width: 60%;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 13vh;
+        margin-bottom: 13vh;
+        justify-content: center;
+        align-items: center;
+        input{
+            height: 2rem;
+            width: 30rem;
+            margin: 1rem;
+        }
+        button{
+            height: 2rem;
+            width: 10rem;
+            margin: 1rem;
+
+        }
+
+    }
+}

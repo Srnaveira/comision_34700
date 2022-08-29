@@ -7,6 +7,8 @@ import Footer from './Components/Footer/Footer';
 import Ups from './Components/Ups/Ups'
 import Cart from './Components/Cart/Cart';
 import CartProvider from './Context/CartContext';
+import AddProduct from './Components/AddProduct/AddProduct';
+import Contact from './Components/Contact/Contact';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
                           <Route path='/gender/:genderId' element={ <ItemListContainer/> }/>
                           <Route path='*' element={ <Ups/>} />
                           <Route path={'/cart'} element={ <Cart/>} />
+                          <Route path={'/addproduct'} element={ <AddProduct/>} />
+                          <Route path={'/contact'} element={ <Contact/>} />
                       </Routes>
                       <Footer />
                   </div>
