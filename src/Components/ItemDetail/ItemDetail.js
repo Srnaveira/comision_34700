@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({item}) => {
 
-    const { addItem, isInCart, cart } = useContext(CartContext)
+    const { addItem, isInCart } = useContext(CartContext)
 
     const numvendido = 1
 
@@ -19,7 +19,7 @@ const ItemDetail = ({item}) => {
         isInCart(item.id) ? console.log("El item ya se encuentra en el carrito =>", itemCarrito)
         : addItem(itemCarrito)
 
-        console.log("el Contenido del carrito =>", cart)
+     
     }
 
 

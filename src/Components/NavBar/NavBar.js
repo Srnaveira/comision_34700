@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
-import './navbar.scss'
+import { useContext } from 'react';
 import CartWidget from '../CartWidget/CartWidget';
+import { AuthContext } from '../../Context/AuthContext';
+import './navbar.scss'
 
 const NavBar = () => {
+
+    const { userInfo, logout } = useContext(AuthContext)
 
     return(
         <nav className="container__NavBar">
@@ -27,15 +31,12 @@ const NavBar = () => {
             </ul>
             <CartWidget />
             <ul className="container__NavBar__user">    
-                <li className="container__NavBar__user--inf">USUARIO</li>
+                <li className="container__NavBar__user--inf">{userInfo}</li>
                 <ul className="listGenders">
                     <li>
-                        CONFIGURACION
+                        <Link to="/orders" className='links'>COMPRAS</Link>
                     </li>
-                    <li>
-                        COMPRAS
-                    </li>
-                    <li>
+                    <li onClick={logout}>
                         SALIR
                     </li>
                 </ul>            

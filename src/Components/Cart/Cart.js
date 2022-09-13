@@ -6,7 +6,7 @@ import './cart.scss'
 const Cart = () =>{
 
     const { cart, removeItem, clearCart, calcTotal, endBuy } = useContext(CartContext)
-
+    
     const volver = useNavigate()
 
     const handlerBack = () => {

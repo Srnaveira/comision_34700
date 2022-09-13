@@ -56,7 +56,6 @@
 
 .contenedor__foto{
     height: 85%;
-    border: salmon solid 0px;
     display: flex;
     justify-content: center;
 }
@@ -82,7 +81,7 @@
     background-color: rgb(12, 77, 12);
     color: white;
     font-family:Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 1px;
     font-size: large;
     border: goldenrod solid 2px;
@@ -94,6 +93,5 @@
     border-radius: 8px;
     background-color: red;
     color: white;
-    font-weight: 500;
     border: white solid 2px;
 }

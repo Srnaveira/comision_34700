@@ -5,9 +5,6 @@ import { addDoc, collection } from 'firebase/firestore';
 import { DB } from '../../FirebaseAPI/Config';
 
 
-
-
-
 const Contact = () =>{
 
     const [ values, setValues ] = useState({
@@ -40,8 +37,6 @@ const Contact = () =>{
             [value.target.name]: value.target.value
         })
     }
-
-
 
 
     return(

@@ -15,3 +15,12 @@ export const getProdID = async ( id ) => {
             const datosSend = await getDoc(docRef);
             return datosSend;
         }   
+
+        
+export const getOrders = () => {
+    return new Promise((resolve, reject) =>{
+        const orderRef = collection(DB, 'Orders')
+        resolve(getDocs(orderRef))
+        })
+}
+

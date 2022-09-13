@@ -1,0 +1,91 @@
+.formulario__Login{
+    background-color: rgb(56, 46, 46);
+    height: 95vh;
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    &--objetos{
+        display: flex;
+        flex-direction: column;
+        height: 25vh;
+        width: 44vh;
+        background-color: rgb(206, 206, 206);
+        font-weight: bold;
+        font-size: 3rem;
+        border-radius: 40px;
+        .LoginTitulo{
+           border-bottom: rgba(162, 162, 56, 0.866) solid 2px;
+           color: rgb(145, 109, 17);   
+           margin-top: 5%;
+           margin-bottom: 8%;
+           margin-left: 5%;
+           margin-right: 5%; 
+        }
+        .email{
+            height: 9%;
+            width: 70%;
+            color: black;
+            justify-content: center;
+            align-self: center;
+            border-radius: 10px;
+            margin-bottom: 2%;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+        }    
+        .password{
+            height: 9%;
+            width: 70%;
+            color: black;
+            justify-content: center;
+            align-self: center;
+            border-radius: 10px;
+            margin-bottom: 1%;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+        }    
+        .Crear_cuenta{
+            width: 70%;
+            height: 8%;
+            justify-content: center;
+            align-self: center;
+            text-align: start;
+            font-size: 13px;
+            margin-top: 0%;
+
+        }
+        .buttonSubmit{
+            margin-top: 10px;
+            height: 10%;
+            width: 30%;
+            align-self: center;
+            border-radius: 15px;
+            background-color: rgb(12, 77, 12);
+            border: white 1px solid;
+            color: white;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+            &:hover{
+                background-color: red;
+                color: white;
+                font-weight: 500;
+                border: white solid 2px;
+            }
+            
+
+        }
+    }
+
+
+
+
+
+
+
+}

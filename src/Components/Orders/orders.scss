@@ -1,0 +1,25 @@
+.contenedor__compras{
+    height: 86vh;
+    margin: 2rem;
+
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    .itemsOrdenados{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+        width: 80%;
+        text-transform:uppercase;
+        border-bottom: solid goldenrod 2px;
+        
+    }
+    img{
+        height: 100px;
+    }
+}

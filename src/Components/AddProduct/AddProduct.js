@@ -10,9 +10,9 @@ const AddProduct = () => {
         titulo: "",
         autor: "", 
         genero: "",
-        stock: '',
-        precio: '',
-        descuento: '',
+        stock: "",
+        precio: "",
+        descuento: "",
         imagen: "",
         resumen: "" 
     })
@@ -24,8 +24,7 @@ const AddProduct = () => {
             ...values
         };
 
-        console.log('>>>---->>NewProduct ', newProduct)
-
+    
         const newProductadd = await addDoc(collection(DB, 'Productos'), newProduct);
         
         console.log('>>---> newID: ', newProductadd.id)
@@ -75,7 +74,7 @@ const AddProduct = () => {
                     />
                     <input
                         name="precio"
-                        placeholder="Ingrese el autor del Libro"
+                        placeholder="Ingrese el Precio del Libro"
                         type={'number'}
                         value={values.precio}
                         onChange={captureValues}                    
@@ -83,7 +82,7 @@ const AddProduct = () => {
                     <input
                         name="descuento"
                         placeholder="Ingrese el descuento del producto"
-                        type={'text'}
+                        type={'number'}
                         value={values.descuento}
                         onChange={captureValues}
                     />
