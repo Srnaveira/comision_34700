@@ -46,15 +46,7 @@ const CartProvider = ({children}) => {
 
     const endBuy = async (values) => {
 
-        console.log("esto es el contenido del carro ==>", values)
-      
-            console.log("entro a ejecutar la funcion")
-
-            console.log("Contenido del userData ===>", userData)
-                    
         if(values.length > 0){ 
-            console.log("Entro a generar la Orden ==>")
-            console.log("Contenido del dentro de la funcionuserData ===>", userData)
           
                
                 const Order = {
@@ -77,7 +69,6 @@ const CartProvider = ({children}) => {
                     total: calcTotal()       
                 }
 
-                console.log("Dentro del timeou", Order)
                 const newOrder = await addDoc(collection(DB, 'Orders'), Order);
                 alert('Se a realizado correctamente su compra su N° de seguimiento es  :' + newOrder.id);
 

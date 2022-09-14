@@ -18,7 +18,6 @@ const OrderContainer = () => {
     useEffect(() => {
         setLoading(true)
         let arrayTemp = []
-        console.log(user)
         getOrders()
             .then((datOrders) => {
                 const datosOrders = datOrders.docs.map((doc) =>{
@@ -27,9 +26,13 @@ const OrderContainer = () => {
                     }                    
                 })
                 for(let i=0; i < datosOrders.length ; i++ ){
-                        if(datosOrders[i].buyer.Correo === user){
-                            arrayTemp.push(datosOrders[i].items);                        
-                        }  
+                    for(let y=0; y < datosOrders[i].items.length ; y++ ){
+
+
+                                if(datosOrders[i].buyer.Correo === user){                                      
+                                        arrayTemp.push(datosOrders[i].items[y]);
+                                }     
+                    }                  
                 }
 
                 setOrdersUser(arrayTemp)
